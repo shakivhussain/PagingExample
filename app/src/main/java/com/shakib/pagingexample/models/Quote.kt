@@ -1,6 +1,7 @@
 package com.shakib.pagingexample.models
 
-data class Quotes(
+// Step 4
+data class Quote(
     val _id: String,
     val author: String,
     val authorSlug: String,
