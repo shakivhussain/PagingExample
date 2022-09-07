@@ -7,7 +7,6 @@ import com.shakib.pagingexample.paging.QuotePagingSource
 import com.shakib.pagingexample.retrofit.QuoteApi
 import javax.inject.Inject
 
-// Step 6
 // provide data in the form of live data, data will provide paging library.
 class QuoteRepository @Inject constructor(val quoteApi: QuoteApi) {
 

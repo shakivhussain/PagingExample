@@ -11,7 +11,7 @@ import com.shakib.pagingexample.databinding.ActivityMainBinding
 import com.shakib.pagingexample.paging.QuotePagingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
-// Step 1
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +26,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        /*
+        * Step 1 : MainActivity
+        * Step 2 : QuoteAppApplication
+        * Step 3 : NetworkModule
+        * Step 4 : Create Models
+        * Step 5 : QuotePagingSource
+        * Step 6 : QuoteRepository
+        * Step 7 : QuoteViewModel
+        * Step 7 : Attach to activity with adapter.
+        * */
+
+
+
         adapter = QuotePagingAdapter()
 
         viewModel = ViewModelProvider(this).get(QuoteViewModel::class.java)
@@ -33,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.setHasFixedSize(true)
 
-        binding.recyclerView.adapter= adapter
+        binding.recyclerView.adapter = adapter
 
 
         viewModel.quoteList.observe(this) {
