@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.shakib.pagingexample.databinding.ActivityMainBinding
+import com.shakib.pagingexample.paging.LoaderAdapter
 import com.shakib.pagingexample.paging.QuotePagingAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         * Step 6 : QuoteRepository
         * Step 7 : QuoteViewModel
         * Step 7 : Attach to activity with adapter.
+        *  Adapter Loader
+        * Step 8 :
         * */
 
 
@@ -46,7 +49,10 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.setHasFixedSize(true)
 
-        binding.recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter.withLoadStateHeaderAndFooter(
+            header = LoaderAdapter(),
+            footer = LoaderAdapter(),
+        )
 
 
         viewModel.quoteList.observe(this) {
