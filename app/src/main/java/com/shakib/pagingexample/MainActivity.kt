@@ -1,9 +1,7 @@
 package com.shakib.pagingexample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +35,12 @@ class MainActivity : AppCompatActivity() {
         * Step 7 : QuoteViewModel
         * Step 7 : Attach to activity with adapter.
         *  Adapter Loader
-        * Step 8 :
+        * Step 8 : Create Loader Adapter.
+        *  Remote Mediator
+        * Step 9 : Model and Dao
+        * Step 10 : QuoteDatabase
+        * Step 11 : DatabaseModule
+        *
         * */
 
 

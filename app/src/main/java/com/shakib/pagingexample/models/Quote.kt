@@ -1,7 +1,11 @@
 package com.shakib.pagingexample.models
 
-// Step 4
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "Quote")
 data class Quote(
+    @PrimaryKey(autoGenerate = false)
     val _id: String,
     val author: String,
     val authorSlug: String,
@@ -9,5 +13,5 @@ data class Quote(
     val dateAdded: String,
     val dateModified: String,
     val length: Int,
-    val tags: List<String>
+//    val tags: List<String> // use converter to convert it.
 )
